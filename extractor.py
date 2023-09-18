@@ -1,6 +1,15 @@
-from PySide6.QtWidgets import (QApplication, QMainWindow, QPushButton, QVBoxLayout, 
-                               QWidget, QLineEdit, QFileDialog, QLabel, QTextEdit)
+from PySide6.QtWidgets import (QApplication,
+                               QMainWindow,
+                               QPushButton,
+                               QVBoxLayout, 
+                               QWidget,
+                               QLineEdit,
+                               QFileDialog,
+                               QLabel,
+                               QTextEdit,
+                               )
 from PySide6.QtCore import Qt
+from PySide6.QtGui import QIcon
 import csv
 
 def extract_lines(file_paths, target_string):
@@ -27,7 +36,8 @@ class CSVExtractorApp(QMainWindow):
 
         # Set window title and size
         self.setWindowTitle("PyExtractor")
-        self.resize(400, 300)
+        self.setWindowIcon(QIcon("icon.png"))
+        self.resize(400, 200)
 
         # Main widget and layout
         main_widget = QWidget(self)
@@ -92,7 +102,7 @@ class CSVExtractorApp(QMainWindow):
             background-color: #f5f5f5;
         }
         QPushButton {
-            background-color: #A755FF;
+            background-color: #0D9BC8;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -101,7 +111,7 @@ class CSVExtractorApp(QMainWindow):
             border-radius: 4px;
         }
         QPushButton:hover {
-            background-color: #670DC8;
+            background-color: #045975;
         }
         QLineEdit, QTextEdit {
             padding: 5px;
